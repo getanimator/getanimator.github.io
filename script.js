@@ -3,9 +3,31 @@
 function verificarTecla(event) {
     if (event.key === "Enter") {
         event.preventDefault();
-        adicionarMensagem("Você", perguntaInput.value);
-        responder();
+        const perguntaInput = document.getElementById('perguntaInput');
+        const pergunta = perguntaInput.value.trim();
+
+        if (pergunta !== '') {
+            const resposta = obterRespostaAleatoria();
+            adicionarMensagem("Você", pergunta);
+            adicionarMensagem("Product Manager GPT", resposta);
+        }
     }
+}
+
+function obterRespostaAleatoria() {
+    const respostas = [
+        "Depende...",
+        "Vamos priorizar isso nas próximas iterações/sprints/ciclos",
+        "Vamos realizar uma análise de custo-benefício",
+        "Vamos validar isso com os usuários",
+        "Precisamos considerar a estratégia de longo prazo",
+        "Vamos iterar com base no feedback",
+        "Isso está alinhado com nossos objetivos/metas"
+    ];
+
+    // Selecionar uma resposta aleatória
+    const indiceResposta = Math.floor(Math.random() * respostas.length);
+    return respostas[indiceResposta];
 }
 
 function adicionarMensagem(remetente, mensagem) {
@@ -16,14 +38,4 @@ function adicionarMensagem(remetente, mensagem) {
     chatMessages.appendChild(mensagemElement);
     perguntaInput.value = '';
     chatMessages.scrollTop = chatMessages.scrollHeight;
-}
-
-function responder() {
-    const respostaElement = document.getElementById('resposta');
-    const pergunta = perguntaInput.value.trim();
-    if (pergunta !== '') {
-        adicionarMensagem("Product Manager GPT", 'Depende...');
-    } else {
-        adicionarMensagem("Product Manager GPT", 'Por favor, faça uma pergunta válida.');
-    }
 }
