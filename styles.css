@@ -7,11 +7,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh; /* Mínimo 100% da altura da viewport */
 }
 
 .chat-container {
-    width: 400px;
+    width: 100%;
+    max-width: 400px; /* Largura máxima para manter a leitura confortável em telas grandes */
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -53,15 +54,4 @@ body {
     border-radius: 8px;
 }
 
-#perguntaInput:focus {
-    border-bottom: 1px solid #0077cc;
-    border-radius: 8px;
-}
-
-.chat-message {
-    margin-bottom: 10px;
-}
-
-.chat-message strong {
-    color: #0077cc;
-}
+#pergunta
