@@ -15,7 +15,9 @@ body {
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .chat-header {
@@ -26,6 +28,7 @@ body {
 }
 
 .chat-messages {
+    flex: 1; /* Ocupa o espaço restante */
     padding: 10px;
     max-height: 300px;
     overflow-y: auto;
