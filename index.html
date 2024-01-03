@@ -7,10 +7,14 @@
     <title>Product Manager GPT</title>
 </head>
 <body>
-    <div class="container">
-        <h1>Product Manager GPT</h1>
-        <input type="text" id="perguntaInput" placeholder="Faça sua pergunta..." onkeydown="verificarTecla(event)">
-        <p id="resposta"></p>
+    <div class="chat-container">
+        <div class="chat-header">
+            <h1>Product Manager GPT</h1>
+        </div>
+        <div class="chat-messages" id="chatMessages"></div>
+        <div class="chat-input">
+            <input type="text" id="perguntaInput" placeholder="Faça sua pergunta..." onkeydown="verificarTecla(event)">
+        </div>
     </div>
 
     <script src="script.js"></script>
