@@ -32,7 +32,7 @@ body {
 
 .chat-messages {
     flex: 1;
-    padding: 230px;
+    padding: 30px;
     max-height: 300px;
     overflow-y: auto;
 }
