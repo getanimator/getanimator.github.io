@@ -1,6 +1,7 @@
 // Função para verificar a tecla pressionada
 function verificarTecla(event) {
     if (event.key === "Enter") {
+        event.preventDefault(); // Impede a quebra de linha no textarea ou formulários
         responder();
     }
 }
@@ -16,4 +17,7 @@ function responder() {
     } else {
         respostaElement.textContent = 'Por favor, faça uma pergunta válida.';
     }
+
+    // Limpar a caixa de pergunta após responder
+    perguntaInput.value = '';
 }
