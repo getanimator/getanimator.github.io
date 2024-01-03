@@ -16,13 +16,13 @@ function verificarTecla(event) {
 
 function obterRespostaAleatoria() {
     const respostas = [
-        "Depende...",
-        "Vamos priorizar isso nas próximas iterações/sprints/ciclos",
-        "Vamos realizar uma análise de custo-benefício",
-        "Vamos validar isso com os usuários",
-        "Precisamos considerar a estratégia de longo prazo",
-        "Vamos iterar com base no feedback",
-        "Isso está alinhado com nossos objetivos/metas"
+       "Ah, a resposta mais confiável desde que Sócrates era um PM. Depende... talvez eu tenha uma resposta melhor depois de consultar a minha bola de cristal.",
+        "Estamos adicionando isso à nossa lista de tarefas, junto com encontrar a fonte da eterna juventude para nossos desenvolvedores.",
+        "Vamos colocar nossos matemáticos para trabalhar e ver se vale a pena mais do que uma máquina de café infinita.",
+        "Vamos fazer uma festa com os usuários para celebrar suas opiniões enquanto oferecemos pizza grátis. Pesquisa de mercado com estilo!",
+        "Estamos pensando tão à frente que estamos prestes a lançar um produto em Marte. Elon Musk, prepare-se para a concorrência!",
+        "Estamos prontos para mais iterações do que uma banda de jazz. Dê-nos feedback e verá uma melodia de melhorias.",
+        "Nossos objetivos são tão claros que até os astrólogos concordam. O universo está alinhado, e nosso produto também."
     ];
 
     // Selecionar uma resposta aleatória
