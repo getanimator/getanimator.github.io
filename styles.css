@@ -24,11 +24,13 @@ body {
     background-color: #0077cc;
     color: #fff;
     padding: 10px;
-    text-align: left; /* Alinhado à esquerda */
+    text-align: left;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
 }
 
 .chat-messages {
-    flex: 1; /* Ocupa o espaço restante */
+    flex: 1;
     padding: 10px;
     max-height: 300px;
     overflow-y: auto;
@@ -36,7 +38,9 @@ body {
 
 .chat-input {
     padding: 10px;
-    border-top: 1px solid #ddd; /* Adiciona uma borda superior para separar a entrada de mensagens */
+    border-top: 1px solid #ddd;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
 }
 
 #perguntaInput {
@@ -46,10 +50,12 @@ body {
     font-size: 16px;
     border: none;
     outline: none;
+    border-radius: 8px;
 }
 
 #perguntaInput:focus {
     border-bottom: 1px solid #0077cc;
+    border-radius: 8px;
 }
 
 .chat-message {
