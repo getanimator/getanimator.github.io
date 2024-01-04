@@ -1,26 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Product Manager GPT</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-    }
-
-    .main-text {
-      font-size: 20px;
-    }
-
-    .sub-text {
-      font-size: 14px;
-      margin-top: -10px; /* ajuste para alinhar corretamente com o texto principal */
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Product Manager GPT</title>
 </head>
 <body>
-  <div class="main-text">Product Manager GPT</div>
-  <div class="sub-text">para stakeholders</div>
+    <div class="chat-container">
+        <div class="chat-header">
+            <h1>Product Manager GPT</h1>
+            <p class="subtitle">Faça suas perguntas</p>
+        </div>
+        <div class="chat-messages" id="chatMessages"></div>
+        <div class="chat-input">
+            <input type="text" id="perguntaInput" placeholder="Faça sua pergunta..." onkeydown="verificarTecla(event)">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
