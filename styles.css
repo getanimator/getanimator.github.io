@@ -41,7 +41,7 @@ body {
 
 .chat-messages {
     flex: 1;
-    padding: 35vh;
+    padding: 20px;
     overflow-y: auto;
 }
 
