@@ -1,6 +1,6 @@
 // script.js
 
-const velocidadeDigitacao = 50; // Velocidade em milissegundos por caractere
+const velocidadeDigitacao = 90; // Velocidade em milissegundos por caractere
 
 function verificarTecla(event) {
     if (event.key === "Enter") {
