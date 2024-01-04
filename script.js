@@ -1,5 +1,45 @@
 // script.js
 
+const velocidadeDigitacao = 50; // Velocidade em milissegundos por caractere
+
+function verificarTecla(event) {
+    if (event.key === "Enter") {
+        event.preventDefault();
+        const perguntaInput = document.getElementById('perguntaInput');
+        const pergunta = perguntaInput.value.trim();
+
+        if (pergunta !== '') {
+            const resposta = obterRespostaComica();
+            adicionarMensagem("Você", pergunta);
+            mostrarRespostaDigitada("Product Manager GPT", resposta);
+        }
+    }
+}
+
+function mostrarRespostaDigitada(remetente, resposta) {
+    const chatMessages = document.getElementById('chatMessages');
+    const mensagemElement = document.createElement('div');
+    mensagemElement.className = 'chat-message';
+    chatMessages.appendChild(mensagemElement);
+
+    let index = 0;
+
+    function exibirProximoCaractere() {
+        if (index < resposta.length) {
+            mensagemElement.innerHTML = `<strong>${remetente}:</strong> ${resposta.substring(0, index + 1)}`;
+            index++;
+            setTimeout(exibirProximoCaractere, velocidadeDigitacao);
+        }
+    }
+
+    exibirProximoCaractere();
+    perguntaInput.value = '';
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+}
+
+// Restante do código original...
+
+
 function verificarTecla(event) {
     if (event.key === "Enter") {
         event.preventDefault();
