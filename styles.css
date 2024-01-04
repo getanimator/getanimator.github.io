@@ -13,10 +13,11 @@ body {
 /* Adicionado um novo seletor para o modo noturno */
 body.dark-mode {
     background-color: #1a1a1a; /* Cor de fundo mais escura para o modo noturno */
+    color: #fff; /* Cor do texto mais clara para melhor contraste no modo noturno */
 }
 
 .chat-container {
-    width: 100%; /* Alterado para 100% */
+    width: 100%;
     max-width: 400px;
     background-color: #fff;
     border-radius: 8px;
@@ -24,6 +25,13 @@ body.dark-mode {
     display: flex;
     flex-direction: column;
     max-height: 90vh;
+    transition: background-color 0.3s ease; /* Adicionado para suavizar a transição de fundo */
+}
+
+/* Adicionado um novo seletor para o modo noturno */
+body.dark-mode .chat-container {
+    background-color: #333; /* Cor de fundo mais escura para o modo noturno */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); /* Ajuste na sombra para melhor contraste */
 }
 
 .chat-header {
