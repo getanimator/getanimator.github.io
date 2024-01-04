@@ -48,8 +48,8 @@ function verificarTecla(event) {
 
         if (pergunta !== '') {
             const resposta = obterRespostaAleatoria();
-            adicionarMensagem("Você", pergunta);
-            adicionarMensagem("Product Manager GPT", resposta);
+            adicionarMensagemComDigitacao("Você", pergunta);
+            adicionarMensagemComDigitacao("Product Manager GPT", resposta);
         }
     }
 }
