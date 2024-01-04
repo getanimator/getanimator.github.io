@@ -11,6 +11,7 @@ function verificarTecla(event) {
         if (pergunta !== '') {
             const resposta = obterRespostaComica();
             adicionarMensagemComDigitacao("Product Manager GPT", resposta);
+// Limpar o conteúdo do campo de entrada após pressionar Enter
             perguntaInput.value = '';
         }
     }
