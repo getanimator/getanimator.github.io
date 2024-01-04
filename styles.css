@@ -12,7 +12,7 @@ body {
 
 .chat-container {
     width: 100%;
-    max-width: 230px;
+    max-width: 200px;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -42,8 +42,8 @@ body {
 
 .chat-messages {
     flex: 1;
-    padding: 250px 10px 10px;
-    max-height: 250px;
+    padding: 200px 10px 10px;
+    max-height: 200px;
     overflow-y: auto;
 }
 
