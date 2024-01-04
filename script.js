@@ -10,13 +10,13 @@ function verificarTecla(event) {
 
         if (pergunta !== '') {
             const resposta = obterRespostaComica();
-            adicionarMensagem("Você", pergunta);
-            mostrarRespostaDigitada("Product Manager GPT", resposta);
+            adicionarMensagemComDigitacao("Product Manager GPT", resposta);
+            perguntaInput.value = '';
         }
     }
 }
 
-function mostrarRespostaDigitada(remetente, resposta) {
+function adicionarMensagemComDigitacao(remetente, resposta) {
     const chatMessages = document.getElementById('chatMessages');
     const mensagemElement = document.createElement('div');
     mensagemElement.className = 'chat-message';
@@ -33,11 +33,11 @@ function mostrarRespostaDigitada(remetente, resposta) {
     }
 
     exibirProximoCaractere();
-    perguntaInput.value = '';
     chatMessages.scrollTop = chatMessages.scrollHeight;
 }
 
 // Restante do código original...
+
 
 
 function verificarTecla(event) {
