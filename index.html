@@ -11,10 +11,12 @@
         <div class="chat-header">
             <h1>Product Manager GPT</h1>
             <div class="subtitle">Para stakeholders</div>
-            <!-- Adicionado o botão de alternância de modo noturno ao chat-header -->
             <button id="toggleNightMode" onclick="alternarModoNoturno()">Modo Noturno</button>
         </div>
-        <!-- Restante do conteúdo HTML -->
+        <div id="chatMessages" class="chat-messages"></div>
+        <div class="chat-input">
+            <input id="perguntaInput" type="text" placeholder="Faça sua pergunta" onkeydown="verificarTecla(event)">
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
