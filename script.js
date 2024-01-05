@@ -5,12 +5,6 @@ function alternarModoNoturno() {
     body.classList.toggle('dark-mode');
 }
 
-document.getElementById('toggleNightMode').addEventListener('click', function() {
-    document.body.classList.toggle('dark-mode');
-});
-
-const velocidadeDigitacao = 30;
-
 function verificarTecla(event) {
     if (event.key === "Enter") {
         event.preventDefault();
@@ -24,7 +18,6 @@ function verificarTecla(event) {
         }
     }
 }
-
 function obterRespostaAleatoria() {
     const respostas = [
        "Ah, a resposta mais confiável desde que Sócrates era um PM. Depende... talvez eu tenha uma resposta melhor depois de consultar a minha bola de cristal.",
@@ -45,7 +38,7 @@ function obterRespostaAleatoria() {
         "Nossos objetivos são tão claros que até os astrólogos concordam. O universo está alinhado, e nosso produto também."
     ];
 
-const indiceResposta = Math.floor(Math.random() * respostas.length);
+ const indiceResposta = Math.floor(Math.random() * respostas.length);
     return respostas[indiceResposta];
 }
 
@@ -61,7 +54,7 @@ function adicionarMensagemComDigitacao(remetente, resposta) {
         if (index < resposta.length) {
             mensagemElement.innerHTML = `<strong>${remetente}:</strong> ${resposta.substring(0, index + 1)}`;
             index++;
-            setTimeout(exibirProximoCaractere, velocidadeDigitacao);
+            setTimeout(exibirProximoCaractere, 30);
         }
     }
 
