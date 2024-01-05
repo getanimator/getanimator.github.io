@@ -7,28 +7,29 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    background-color: #fff;
     transition: background-color 0.3s ease;
 }
 
-body.dark-mode {
-    background-color: #333; /* Cor de fundo mais escura para o modo noturno */
+.dark-mode body {
+    background-color: #333;
 }
 
 .chat-container {
     width: 100%;
     max-width: 400px;
-    background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
     max-height: 90vh;
+    background-color: #fff;
     transition: background-color 0.3s ease;
 }
 
-.chat-container.dark-mode {
-    background-color: #333; /* Cor de fundo mais escura para o modo noturno */
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); /* Ajuste na sombra para melhor contraste */
+.dark-mode .chat-container {
+    background-color: #333;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
 }
 
 .chat-header {
@@ -45,10 +46,6 @@ body.dark-mode {
 
 .chat-header h1 {
     margin: 0;
-}
-
-.chat-header.dark-mode {
-    background-color: #0077cc; /* Mantenha a cor de fundo azul para o cabeçalho */
 }
 
 .subtitle {
@@ -69,7 +66,7 @@ body.dark-mode {
     cursor: pointer;
 }
 
-body.dark-mode #toggleNightMode {
+.dark-mode #toggleNightMode {
     background-color: #333;
 }
 
