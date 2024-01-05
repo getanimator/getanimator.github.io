@@ -10,6 +10,10 @@ body {
     transition: background-color 0.3s ease;
 }
 
+body.dark-mode {
+    background-color: #333; /* Cor de fundo mais escura para o modo noturno */
+}
+
 .chat-container {
     width: 100%;
     max-width: 400px;
@@ -22,9 +26,9 @@ body {
     transition: background-color 0.3s ease;
 }
 
-body.dark-mode .chat-container {
-    background-color: #333;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+.chat-container.dark-mode {
+    background-color: #333; /* Cor de fundo mais escura para o modo noturno */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); /* Ajuste na sombra para melhor contraste */
 }
 
 .chat-header {
@@ -41,6 +45,10 @@ body.dark-mode .chat-container {
 
 .chat-header h1 {
     margin: 0;
+}
+
+.chat-header.dark-mode {
+    background-color: #0077cc; /* Mantenha a cor de fundo azul para o cabeçalho */
 }
 
 .subtitle {
