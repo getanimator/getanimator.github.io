@@ -1,6 +1,8 @@
 // script.js
 
-
+document.getElementById('toggleNightMode').addEventListener('click', function() {
+    document.body.classList.toggle('dark-mode');
+});
 
 const velocidadeDigitacao = 30; // Velocidade em milissegundos por caractere
 
