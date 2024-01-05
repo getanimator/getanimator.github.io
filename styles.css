@@ -7,8 +7,10 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    transition: background-color 0.3s ease; /* Adicionado para suavizar a transição de fundo */
+    transition: background-color 0.3s ease;
+    flex-direction: column;
 }
+
 #toggleNightMode {
     position: fixed;
     top: 10px;
@@ -21,7 +23,6 @@ body {
     cursor: pointer;
 }
 
-/* Adicionado um novo seletor para o modo noturno */
 body.dark-mode #toggleNightMode {
     background-color: #333;
 }
