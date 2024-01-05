@@ -1,6 +1,5 @@
 // script.js
 
-// Adicionado uma função para alternar entre os modos claro e escuro
 function alternarModoNoturno() {
     const body = document.body;
     body.classList.toggle('dark-mode');
@@ -10,7 +9,7 @@ document.getElementById('toggleNightMode').addEventListener('click', function() 
     document.body.classList.toggle('dark-mode');
 });
 
-const velocidadeDigitacao = 30; // Velocidade em milissegundos por caractere
+const velocidadeDigitacao = 30;
 
 function verificarTecla(event) {
     if (event.key === "Enter") {
@@ -46,8 +45,7 @@ function obterRespostaAleatoria() {
         "Nossos objetivos são tão claros que até os astrólogos concordam. O universo está alinhado, e nosso produto também."
     ];
 
-    // Selecionar uma resposta aleatória
-    const indiceResposta = Math.floor(Math.random() * respostas.length);
+const indiceResposta = Math.floor(Math.random() * respostas.length);
     return respostas[indiceResposta];
 }
 
@@ -68,15 +66,5 @@ function adicionarMensagemComDigitacao(remetente, resposta) {
     }
 
     exibirProximoCaractere();
-    chatMessages.scrollTop = chatMessages.scrollHeight;
-}
-
-function adicionarMensagem(remetente, mensagem) {
-    const chatMessages = document.getElementById('chatMessages');
-    const mensagemElement = document.createElement('div');
-    mensagemElement.className = 'chat-message';
-    mensagemElement.innerHTML = `<strong>${remetente}:</strong> ${mensagem}`;
-    chatMessages.appendChild(mensagemElement);
-    perguntaInput.value = '';
     chatMessages.scrollTop = chatMessages.scrollHeight;
 }
