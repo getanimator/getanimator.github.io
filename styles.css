@@ -10,11 +10,26 @@ body {
     transition: background-color 0.3s ease; /* Adicionado para suavizar a transição de fundo */
 }
 
-/* Adicionado um novo seletor para o modo noturno */
-body.dark-mode {
-    background-color: #1a1a1a; /* Cor de fundo mais escura para o modo noturno */
-    color: #fff; /* Cor do texto mais clara para melhor contraste no modo noturno */
+#toggleNightMode {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    padding: 8px 12px;
+    background-color: #0077cc;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
+
+
+/* Adicionado um novo seletor para o modo noturno */
+
+body.dark-mode #toggleNightMode {
+    background-color: #333;
+}
+/* Cor de fundo mais escura para o modo noturno */
+/* Cor do texto mais clara para melhor contraste no modo noturno */
 
 .chat-container {
     width: 100%;
@@ -35,6 +50,9 @@ body.dark-mode .chat-container {
 }
 
 .chat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: #0077cc;
     color: #fff;
     padding: 10px;
@@ -50,6 +68,12 @@ body.dark-mode .chat-container {
 .subtitle {
     font-size: 14px;
     margin-top: 5px;
+    margin-left: 10px; /* Adicionado margin-left para espaçamento entre h1 e subtitle */
+}
+
+/* Adicionado para ajustar o posicionamento do toggle */
+#toggleNightMode, .subtitle {
+    margin-right: 10px;
 }
 
 .chat-messages {
