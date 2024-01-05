@@ -5,26 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Product Manager GPT</title>
-    
-    
 </head>
 <body>
     <div class="chat-container">
-    <div class="chat-container">
         <div class="chat-header">
             <h1>Product Manager GPT</h1>
-            <subtitle>Para Stakeholders</subtitle>
-            <button id="toggleNightMode">Night Mode</button>
-            
-            
-    
+            <div class="subtitle">Para stakeholders</div>
+            <!-- Adicionado o botão de alternância de modo noturno ao chat-header -->
+            <button id="toggleNightMode" onclick="alternarModoNoturno()">Modo Noturno</button>
         </div>
-        <div class="chat-messages" id="chatMessages"></div>
-        <div class="chat-input">
-            <input type="text" id="perguntaInput" placeholder="Faça suas perguntas..." onkeydown="verificarTecla(event)">
-        </div>
+        <!-- Restante do conteúdo HTML -->
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>
