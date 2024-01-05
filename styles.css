@@ -9,11 +9,21 @@ body {
     min-height: 100vh;
     transition: background-color 0.3s ease; /* Adicionado para suavizar a transição de fundo */
 }
+#toggleNightMode {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    padding: 8px 12px;
+    background-color: #0077cc;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
 
 /* Adicionado um novo seletor para o modo noturno */
-body.dark-mode {
-    background-color: #1a1a1a; /* Cor de fundo mais escura para o modo noturno */
-    color: #fff; /* Cor do texto mais clara para melhor contraste no modo noturno */
+body.dark-mode #toggleNightMode {
+    background-color: #333;
 }
 
 .chat-container {
