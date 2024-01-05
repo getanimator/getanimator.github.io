@@ -1,8 +1,5 @@
 // script.js
 
-// script.js
-
-
 
 
 const velocidadeDigitacao = 30; // Velocidade em milissegundos por caractere
@@ -17,7 +14,7 @@ function verificarTecla(event) {
             const resposta = obterRespostaComica();
             adicionarMensagemComDigitacao("Product Manager GPT", resposta);
 // Limpar o conteúdo do campo de entrada após pressionar Enter
-            perguntaInput.value = '';
+         perguntaInput.value = '';
         }
     }
 }
