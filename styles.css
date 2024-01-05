@@ -12,7 +12,7 @@ body {
 }
 
 #toggleNightMode {
-    position: fixed;
+    position: Left;
     top: 10px;
     right: 10px;
     padding: 8px 12px;
@@ -68,7 +68,7 @@ body.dark-mode .chat-container {
 
 /* Adicionado para alinhar o botão ao lado do subtítulo */
 #toggleNightMode, .subtitle {
-    margin-right: 10px;
+    margin-right: 5px;
 }
 
 .chat-messages {
