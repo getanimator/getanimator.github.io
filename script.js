@@ -1,11 +1,11 @@
 // script.js
 
+// script.js
 
-//função para alternar entre os modos claro e escuro
-function alternarModoNoturno() {
-    const body = document.body;
-    body.classList.toggle('dark-mode');
-}
+document.getElementById('toggleNightMode').addEventListener('click', function() {
+    document.body.classList.toggle('dark-mode');
+});
+
 
 const velocidadeDigitacao = 30; // Velocidade em milissegundos por caractere
 
