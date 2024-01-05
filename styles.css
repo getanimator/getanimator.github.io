@@ -7,13 +7,13 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    transition: background-color 0.3s ease;
-    flex-direction: column;
+    transition: background-color 0.3s ease; /* Adicionado para suavizar a transição de fundo */
 }
 
-
-body.dark-mode #toggleNightMode {
-    background-color: #333;
+/* Adicionado um novo seletor para o modo noturno */
+body.dark-mode {
+    background-color: #1a1a1a; /* Cor de fundo mais escura para o modo noturno */
+    color: #fff; /* Cor do texto mais clara para melhor contraste no modo noturno */
 }
 
 .chat-container {
@@ -35,9 +35,6 @@ body.dark-mode .chat-container {
 }
 
 .chat-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     background-color: #0077cc;
     color: #fff;
     padding: 10px;
@@ -52,12 +49,7 @@ body.dark-mode .chat-container {
 
 .subtitle {
     font-size: 14px;
-    margin:0;
-}
-
-/* Adicionado para alinhar o botão ao lado do subtítulo */
-#toggleNightMode, .subtitle {
-    margin-right: 5px;
+    margin-top: 5px;
 }
 
 .chat-messages {
