@@ -19,45 +19,6 @@ function verificarTecla(event) {
         const pergunta = perguntaInput.value.trim();
 
         if (pergunta !== '') {
-            const resposta = obterRespostaComica();
-            adicionarMensagemComDigitacao("Product Manager GPT", resposta);
-// Limpar o conteúdo do campo de entrada após pressionar Enter
-         perguntaInput.value = '';
-        }
-    }
-}
-
-function adicionarMensagemComDigitacao(remetente, resposta) {
-    const chatMessages = document.getElementById('chatMessages');
-    const mensagemElement = document.createElement('div');
-    mensagemElement.className = 'chat-message';
-    chatMessages.appendChild(mensagemElement);
-
-    let index = 0;
-
-    function exibirProximoCaractere() {
-        if (index < resposta.length) {
-            mensagemElement.innerHTML = `<strong>${remetente}:</strong> ${resposta.substring(0, index + 1)}`;
-            index++;
-            setTimeout(exibirProximoCaractere, velocidadeDigitacao);
-        }
-    }
-
-    exibirProximoCaractere();
-    chatMessages.scrollTop = chatMessages.scrollHeight;
-}
-
-// 
-
-
-
-function verificarTecla(event) {
-    if (event.key === "Enter") {
-        event.preventDefault();
-        const perguntaInput = document.getElementById('perguntaInput');
-        const pergunta = perguntaInput.value.trim();
-
-        if (pergunta !== '') {
             const resposta = obterRespostaAleatoria();
             adicionarMensagemComDigitacao("Você", pergunta);
             adicionarMensagemComDigitacao("Product Manager GPT", resposta);
@@ -88,6 +49,26 @@ function obterRespostaAleatoria() {
     // Selecionar uma resposta aleatória
     const indiceResposta = Math.floor(Math.random() * respostas.length);
     return respostas[indiceResposta];
+}
+
+function adicionarMensagemComDigitacao(remetente, resposta) {
+    const chatMessages = document.getElementById('chatMessages');
+    const mensagemElement = document.createElement('div');
+    mensagemElement.className = 'chat-message';
+    chatMessages.appendChild(mensagemElement);
+
+    let index = 0;
+
+    function exibirProximoCaractere() {
+        if (index < resposta.length) {
+            mensagemElement.innerHTML = `<strong>${remetente}:</strong> ${resposta.substring(0, index + 1)}`;
+            index++;
+            setTimeout(exibirProximoCaractere, velocidadeDigitacao);
+        }
+    }
+
+    exibirProximoCaractere();
+    chatMessages.scrollTop = chatMessages.scrollHeight;
 }
 
 function adicionarMensagem(remetente, mensagem) {
