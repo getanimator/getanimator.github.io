@@ -52,7 +52,12 @@ body.dark-mode {
 .subtitle {
     font-size: 14px;
     margin-top: 5px;
-    margin-left: 10px;
+    margin-left: 10px; /* Adicionado margin-left para espaçamento entre h1 e subtitle */
+}
+
+/* Adicionado para ajustar o posicionamento do toggle */
+#toggleNightMode, .subtitle {
+    margin-right: 10px;
 }
 
 #toggleNightMode {
